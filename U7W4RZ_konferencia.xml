@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konferencia>
+    <cim>Miskolc, Egyetemváros</cim>
+    <hallgatok>
+        <hallgato>
+            <nev>Valkó Attila László</nev>
+            <lakcim>Miskolc, Gépész utca</lakcim>
+        </hallgato>
+    </hallgatok>
+    <helyszin>Miskolc</helyszin>
+    <eloado>
+        <nev>Dr. Siménfalvi Zoltán</nev>
+        <adoszam>45454433</adoszam>
+        <lakcim>Miskolc</lakcim>
+    </eloado>
+    <datum>2025.10.15</datum>
+</konferencia>
