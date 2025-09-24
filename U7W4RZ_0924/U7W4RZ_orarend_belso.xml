@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE U7W4RZ_orarend [
-    <!ELEMENT U7W4RZ_orarend (ora+)>
+    <!ELEMENT U7W4RZ_orarend (ora)+>
 
     <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
     <!ATTLIST ora 
