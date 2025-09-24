@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!ELEMENT U7W4RZ_orarend (ora+)>
+<!ELEMENT U7W4RZ_orarend (ora)+>
 <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
 <!ATTLIST ora 
     id ID #REQUIRED
