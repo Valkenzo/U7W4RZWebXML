@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="U7W4RZ_orarend.xsl"?>
+<!DOCTYPE U7W4RZ_orarend SYSTEM "U7W4RZ_orarend.dtd">
+
 <U7W4RZ_orarend>
-    <ora id="01" tipus="elmélet">
+    <ora id="o01" tipus="elmélet">
         <targy>Elektronika</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -12,7 +13,7 @@
         <oktato>Szabó Norbert</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="02" tipus="elmélet">
+    <ora id="o02" tipus="elmélet">
         <targy>WEB technológiák 1.</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -23,7 +24,7 @@
         <oktato>Agárdi Anita</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="03" tipus="gyakorlat">
+    <ora id="o03" tipus="gyakorlat">
         <targy>Műszaki szaknyelv 1.</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -34,7 +35,7 @@
         <oktato>Pataki Jánosné</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="04" tipus="gyakorlat">
+    <ora id="o04" tipus="gyakorlat">
         <targy>WEB technológiák 1.</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -45,7 +46,7 @@
         <oktato>Agárdi Anita</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="05" tipus="elmélet">
+    <ora id="o05" tipus="elmélet">
         <targy>Mobil programozási alapok</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -56,7 +57,7 @@
         <oktato>Agárdi Anita</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="06" tipus="gyakorlat">
+    <ora id="o06" tipus="gyakorlat">
         <targy>Mobil programozási alapok</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -67,7 +68,7 @@
         <oktato>Agárdi Anita</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="07" tipus="gyakorlat">
+    <ora id="o07" tipus="gyakorlat">
         <targy>Windows rendszergazda</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -78,7 +79,7 @@
         <oktato>Dr. Wagner György</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="08" tipus="elmélet">
+    <ora id="o08" tipus="elmélet">
         <targy>Mesterséges intelligencia alapok</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -89,7 +90,7 @@
         <oktato>Kunné Dr. Tamás Judit</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="09" tipus="gyakorlat">
+    <ora id="o09" tipus="gyakorlat">
         <targy>Mesterséges intelligencia alapok</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -100,7 +101,7 @@
         <oktato>Kunné Dr. Tamás Judit</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="10" tipus="gyakorlat">
+    <ora id="o10" tipus="gyakorlat">
         <targy>Elektronika</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -111,7 +112,7 @@
         <oktato>Dr. Kozsely Gábor</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="11" tipus="gyakorlat">
+    <ora id="o11" tipus="gyakorlat">
         <targy>Windows rendszergazda</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -122,7 +123,7 @@
         <oktato>Dr. Wagner György</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="12" tipus="elmélet">
+    <ora id="o12" tipus="elmélet">
         <targy>Webes adatkezelő környezetek</targy>
         <idopont>
             <nap>Szerda</nap>
@@ -133,7 +134,7 @@
         <oktato>Dr. Kovács László</oktato>
         <szak>Mérnökinformatikus</szak>
     </ora>
-    <ora id="13" tipus="gyakorlat">
+    <ora id="o13" tipus="gyakorlat">
         <targy>Webes adatkezelő környezetek</targy>
         <idopont>
             <nap>Szerda</nap>

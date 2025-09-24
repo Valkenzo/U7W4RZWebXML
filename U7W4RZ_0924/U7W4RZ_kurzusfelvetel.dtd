@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT U7W4RZ_kurzusfelvetel (hallgato,kurzusok)>
+<!ATTLIST U7W4RZ_kurzusfelvetel tanev CDATA #REQUIRED>
+<!ATTLIST U7W4RZ_kurzusfelvetel egyetem CDATA #REQUIRED>
+
+<!ELEMENT hallgato (hnev,szulev,szak)>
+<!ELEMENT hnev (#PCDATA)>
+<!ELEMENT szulev (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+<!ATTLIST szak evf CDATA #REQUIRED>
+
+<!ELEMENT kurzusok (kurzus)*>
+<!ELEMENT kurzus (kurzusnev,kredit,hely,idopont+,(oktato|oraado))>
+<!ELEMENT kurzusnev (#PCDATA)>
+<!ELEMENT kredit (#PCDATA)>
+<!ELEMENT hely (#PCDATA)>
+<!ELEMENT idopont (#PCDATA)>
+<!ELEMENT oktato (#PCDATA)>
+<!ELEMENT oraado (#PCDATA)>
+<!ATTLIST kurzus id CDATA #FIXED "U7W4RZ">
+<!ATTLIST kurzus jovahagyas (igen | nem) "nem">
+<!ATTLIST kurzus nyelv CDATA #IMPLIED>
