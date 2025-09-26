@@ -50,5 +50,12 @@
             <idopont>K:16:00-18:00</idopont>
             <oktato>Dr. Wagner Gyorgy</oktato>
         </kurzus>
+          <kurzus>
+            <kurzusnev>Angol muszaki szaknyelv 1.</kurzusnev>
+            <kredit>0</kredit>
+            <hely>A1/316</hely>
+            <idopont>H:12:00-14:00</idopont>
+            <oktato>Pataki Janosne</oktato>
+        </kurzus>
     </kurzusok>
 </U7W4RZ_kurzusfelvetel>
