@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<U7W4RZ_orarend xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="U7W4RZ_orarend.xsd">
+<U7W4RZ_orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="U7W4RZ_orarend.xsd">
     <ora id="01" tipus="előadás">
         <targy>Elektronika</targy>
         <idopont>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<U7W4RZ_kurzusfelvetel
+    tanev="2025"
+    egyetem="Miskolci Egyetem"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="U7W4RZ_kurzusfelvetel.xsd">
+
+    <hallgato>
+        <hnev>Valko Attila Laszlo</hnev>
+        <szulev>1991</szulev>
+        <szak evf="2023">Mernokinformatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+
+        <kurzus jovahagyas="nem" nyelv="magyar">
+            <kurzusnev>Elektrotechnika-elektronika</kurzusnev>
+            <kredit>5</kredit>
+            <hely>E3</hely>
+            <idopont>H:8:00-9:50</idopont>
+            <oktato>Szabo Norbert</oktato>
+        </kurzus>
+
+        <kurzus jovahagyas="nem" nyelv="magyar">
+            <kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>E32</hely>
+            <idopont>K:10:00-12:00</idopont>
+            <oktato>Kunné Dr. Tamas Judit</oktato>
+        </kurzus>
+
+        <kurzus>
+            <kurzusnev>Mobil programozási alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>L101</hely>
+            <idopont>H:16:00-18:00</idopont>
+            <oraado>Dr. Agardi Anita</oraado>
+        </kurzus>
+
+        <kurzus>
+            <kurzusnev>Web technológiák 1.</kurzusnev>
+            <kredit>5</kredit>
+            <hely>E5</hely>
+            <idopont>H:10:00-12:00</idopont>
+            <oraado>Dr. Agardi Anita</oraado>
+        </kurzus>
+
+        <kurzus>
+            <kurzusnev>Webes adatkezelő környezetek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A1/310</hely>
+            <idopont>SZE:8:00-10:00</idopont>
+            <oktato>Dr. Kovacs Laszlo Jozsef</oktato>
+        </kurzus>
+
+        <kurzus>
+            <kurzusnev>Windows rendszergazda</kurzusnev>
+            <kredit>5</kredit>
+            <hely>L103</hely>
+            <idopont>K:16:00-18:00</idopont>
+            <oktato>Dr. Wagner Gyorgy</oktato>
+        </kurzus>
+
+        <kurzus>
+            <kurzusnev>Angol muszaki szaknyelv 1.</kurzusnev>
+            <kredit>0</kredit>
+            <hely>A1/316</hely>
+            <idopont>H:12:00-14:00</idopont>
+            <oktato>Pataki Janosne</oktato>
+        </kurzus>
+
+    </kurzusok>
+
+</U7W4RZ_kurzusfelvetel>

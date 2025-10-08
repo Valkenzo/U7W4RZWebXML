@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- Gyökérelem -->
+  <xs:element name="U7W4RZ_orarend">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ora" type="OraType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ora elem típusa -->
+  <xs:complexType name="OraType">
+    <xs:sequence>
+      <xs:element name="targy" type="nonEmptyString"/>
+      <xs:element name="idopont" type="IdopontType"/>
+      <xs:element name="helyszin" type="nonEmptyString"/>
+      <xs:element name="oktato" type="nonEmptyString"/>
+      <xs:element name="szak" type="nonEmptyString"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="tipus" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="előadás"/>
+          <xs:enumeration value="gyakorlat"/>
+          <xs:enumeration value="konzultáció"/>
+          <xs:enumeration value="szeminárium"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- idopont típusa -->
+  <xs:complexType name="IdopontType">
+    <xs:sequence>
+      <xs:element name="nap">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Hétfő"/>
+            <xs:enumeration value="Kedd"/>
+            <xs:enumeration value="Szerda"/>
+            <xs:enumeration value="Csütörtök"/>
+            <xs:enumeration value="Péntek"/>
+            <xs:enumeration value="Szombat"/>
+            <xs:enumeration value="Vasárnap"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <!-- óra kezdete/vége: egész 0..23 intervallum -->
+      <xs:element name="tol">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="23"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="ig">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="24"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- rövid, nem üres string típus -->
+  <xs:simpleType name="nonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
