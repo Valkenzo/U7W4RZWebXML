@@ -18,6 +18,6 @@
 <!ELEMENT idopont (#PCDATA)>
 <!ELEMENT oktato (#PCDATA)>
 <!ELEMENT oraado (#PCDATA)>
-<!ATTLIST kurzus id CDATA #FIXED "U7W4RZ">
+<!ATTLIST kurzus id CDATA #REQUIRED>
 <!ATTLIST kurzus jovahagyas (igen | nem) "nem">
 <!ATTLIST kurzus nyelv CDATA #IMPLIED>

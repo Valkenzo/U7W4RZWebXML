@@ -8,49 +8,49 @@
         <szak evf="2023">Mernokinformatikus</szak>
     </hallgato>
     <kurzusok>
-        <kurzus jovahagyas="nem" nyelv="magyar">
+        <kurzus id="GEVEE050-B2" jovahagyas="nem" nyelv="magyar">
             <kurzusnev>Elektrotechnika-elektronika</kurzusnev>
             <kredit>5</kredit>
             <hely>E3</hely>
             <idopont>H:8:00-9:50</idopont>
             <oktato>Szabo Norbert</oktato>
         </kurzus>
-        <kurzus jovahagyas="nem" nyelv="magyar">
+        <kurzus id="GEIAK130-B2" jovahagyas="nem" nyelv="magyar">
             <kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
             <kredit>5</kredit>
             <hely>E32</hely>
             <idopont>K:10:00-12:00</idopont>
             <oktato>Kunné Dr. Tamas Judit</oktato>
         </kurzus>
-        <kurzus>
+        <kurzus id="GEIAL335-B2">
             <kurzusnev>Mobil programozási alapok</kurzusnev>
             <kredit>5</kredit>
             <hely>L101</hely>
             <idopont>H:16:00-18:00</idopont>
             <oraado>Dr. Agardi Anita</oraado>
         </kurzus>
-        <kurzus>
+        <kurzus id="GEIAL331-B2">
             <kurzusnev>Web technológiák 1.</kurzusnev>
             <kredit>5</kredit>
             <hely>E5</hely>
             <idopont>H:10:00-12:00</idopont>
             <oraado>Dr. Agardi Anita</oraado>
         </kurzus>
-        <kurzus>
+        <kurzus id="GEIAL32K-B2">
             <kurzusnev>Webes adatkezelő környezetek</kurzusnev>
             <kredit>5</kredit>
             <hely>A1/310</hely>
             <idopont>SZE:8:00-10:00</idopont>
             <oktato>Dr. Kovacs Laszlo Jozsef</oktato>
         </kurzus>
-        <kurzus>
+        <kurzus id="GEIAL30A-B2">
             <kurzusnev>Windows rendszergazda</kurzusnev>
             <kredit>5</kredit>
             <hely>L103</hely>
             <idopont>K:16:00-18:00</idopont>
             <oktato>Dr. Wagner Gyorgy</oktato>
         </kurzus>
-          <kurzus>
+        <kurzus id="MEIOKMUSZAN1">
             <kurzusnev>Angol muszaki szaknyelv 1.</kurzusnev>
             <kredit>0</kredit>
             <hely>A1/316</hely>
