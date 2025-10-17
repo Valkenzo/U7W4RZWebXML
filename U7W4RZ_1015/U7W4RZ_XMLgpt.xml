@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vendeglatas>
+
+    <Ettermek>
+        <Etterem id="E1">
+            <Nev>Aranyvilla Étterem</Nev>
+            <Cim>
+                <Varos>Budapest</Varos>
+                <Utca>Király utca</Utca>
+                <Hazszam>45</Hazszam>
+            </Cim>
+            <Kategoria>Fine Dining</Kategoria>
+        </Etterem>
+
+        <Etterem id="E2">
+            <Nev>Tóparti Csárda</Nev>
+            <Cim>
+                <Varos>Balatonfüred</Varos>
+                <Utca>Parti sétány</Utca>
+                <Hazszam>3</Hazszam>
+            </Cim>
+            <Kategoria>Magyaros</Kategoria>
+        </Etterem>
+    </Ettermek>
+
+    <Foszakacsok>
+        <Foszakacs id="F1">
+            <Nev>Kovács Gábor</Nev>
+            <EtteremRef>E1</EtteremRef>
+            <Vegzettseg>Mester szakács</Vegzettseg>
+        </Foszakacs>
+        <Foszakacs id="F2">
+            <Nev>Nagy Ágnes</Nev>
+            <EtteremRef>E2</EtteremRef>
+            <Vegzettseg>Executive Chef</Vegzettseg>
+        </Foszakacs>
+    </Foszakacsok>
+
+    <Szakacsok>
+        <Szakacs id="S1">
+            <Nev>Szabó Máté</Nev>
+            <Rang>Sous Chef</Rang>
+            <EtteremRef>E1</EtteremRef>
+            <FoszakacsRef>F1</FoszakacsRef>
+        </Szakacs>
+
+        <Szakacs id="S2">
+            <Nev>Tóth Eszter</Nev>
+            <Rang>Pincérségi szakács</Rang>
+            <EtteremRef>E2</EtteremRef>
+            <FoszakacsRef>F2</FoszakacsRef>
+        </Szakacs>
+    </Szakacsok>
+
+    <Gyakornokok>
+        <Gyakornok id="G1">
+            <Nev>Kiss Levente</Nev>
+            <Gyakorlat>3 hónap</Gyakorlat>
+            <MentorRef>S1</MentorRef>
+        </Gyakornok>
+
+        <Gyakornok id="G2">
+            <Nev>Molnár Lilla</Nev>
+            <Gyakorlat>2 hónap</Gyakorlat>
+            <MentorRef>S2</MentorRef>
+        </Gyakornok>
+    </Gyakornokok>
+
+    <Vendeg>
+        <VendegAdat id="V1">
+            <Nev>Horváth Péter</Nev>
+            <Eletkor>34</Eletkor>
+            <Cim>
+                <Varos>Pécs</Varos>
+                <Utca>Petőfi utca</Utca>
+                <Hazszam>22</Hazszam>
+            </Cim>
+        </VendegAdat>
+
+        <VendegAdat id="V2">
+            <Nev>Balogh Dóra</Nev>
+            <Eletkor>27</Eletkor>
+            <Cim>
+                <Varos>Győr</Varos>
+                <Utca>Kossuth Lajos tér</Utca>
+                <Hazszam>6</Hazszam>
+            </Cim>
+        </VendegAdat>
+    </Vendeg>
+
+    <Rendelesek>
+        <Rendeles id="R1">
+            <VendegRef>V1</VendegRef>
+            <EtteremRef>E1</EtteremRef>
+            <Datum>2025-10-10</Datum>
+            <Osszeg>18900</Osszeg>
+            <Tetelek>
+                <Tétel>
+                    <Etel>Marhapofa vörösborban</Etel>
+                    <Ar>8900</Ar>
+                </Tétel>
+                <Tétel>
+                    <Etel>Somlói galuska</Etel>
+                    <Ar>10000</Ar>
+                </Tétel>
+            </Tetelek>
+        </Rendeles>
+
+        <Rendeles id="R2">
+            <VendegRef>V2</VendegRef>
+            <EtteremRef>E2</EtteremRef>
+            <Datum>2025-10-12</Datum>
+            <Osszeg>13200</Osszeg>
+            <Tetelek>
+                <Tétel>
+                    <Etel>Halászlé</Etel>
+                    <Ar>6200</Ar>
+                </Tétel>
+                <Tétel>
+                    <Etel>Palacsinta</Etel>
+                    <Ar>7000</Ar>
+                </Tétel>
+            </Tetelek>
+        </Rendeles>
+    </Rendelesek>
+
+</Vendeglatas>
