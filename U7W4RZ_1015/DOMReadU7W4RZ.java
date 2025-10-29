@@ -1,11 +1,11 @@
-package domneptunkod1015;
+package domU7W4RZ1015;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.*;
 import java.io.File;
 
-public class DomReadNeptunkod {
+public class DomReadU7W4RZ {
 
     public static void main(String[] args) {
         try {
