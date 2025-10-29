@@ -1,0 +1,210 @@
+[DOCUMENT]
+└─ <U7W4RZ_orarend> @xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" @xsi:noNamespaceSchemaLocation="U7W4RZ_orarend.xsd"
+   ├─ <ora> @id="01" @tipus="előadás"
+   │  ├─ <targy>
+   │  │  └─ "Elektronika"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Hétfő"
+   │  │  ├─ <tol>
+   │  │  │  └─ "8"
+   │  │  └─ <ig>
+   │  │     └─ "10"
+   │  ├─ <helyszin>
+   │  │  └─ "III. A4 fsz."
+   │  ├─ <oktato>
+   │  │  └─ "Szabó Norbert"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="02" @tipus="előadás"
+   │  ├─ <targy>
+   │  │  └─ "WEB technológiák 1."
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Hétfő"
+   │  │  ├─ <tol>
+   │  │  │  └─ "10"
+   │  │  └─ <ig>
+   │  │     └─ "12"
+   │  ├─ <helyszin>
+   │  │  └─ "V. A1"
+   │  ├─ <oktato>
+   │  │  └─ "Agárdi Anita"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="03" @tipus="gyakorlat"
+   │  ├─ <targy>
+   │  │  └─ "Műszaki szaknyelv 1."
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Hétfő"
+   │  │  ├─ <tol>
+   │  │  │  └─ "12"
+   │  │  └─ <ig>
+   │  │     └─ "14"
+   │  ├─ <helyszin>
+   │  │  └─ "A1/314"
+   │  ├─ <oktato>
+   │  │  └─ "Pataki Jánosné"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="04" @tipus="gyakorlat"
+   │  ├─ <targy>
+   │  │  └─ "WEB technológiák 1."
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Hétfő"
+   │  │  ├─ <tol>
+   │  │  │  └─ "14"
+   │  │  └─ <ig>
+   │  │     └─ "16"
+   │  ├─ <helyszin>
+   │  │  └─ "In/101"
+   │  ├─ <oktato>
+   │  │  └─ "Agárdi Anita"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="05" @tipus="előadás"
+   │  ├─ <targy>
+   │  │  └─ "Mobil programozási alapok"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Hétfő"
+   │  │  ├─ <tol>
+   │  │  │  └─ "16"
+   │  │  └─ <ig>
+   │  │     └─ "18"
+   │  ├─ <helyszin>
+   │  │  └─ "In/101"
+   │  ├─ <oktato>
+   │  │  └─ "Agárdi Anita"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="06" @tipus="gyakorlat"
+   │  ├─ <targy>
+   │  │  └─ "Mobil programozási alapok"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Hétfő"
+   │  │  ├─ <tol>
+   │  │  │  └─ "18"
+   │  │  └─ <ig>
+   │  │     └─ "20"
+   │  ├─ <helyszin>
+   │  │  └─ "In/101"
+   │  ├─ <oktato>
+   │  │  └─ "Agárdi Anita"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="07" @tipus="gyakorlat"
+   │  ├─ <targy>
+   │  │  └─ "Windows rendszergazda"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Kedd"
+   │  │  ├─ <tol>
+   │  │  │  └─ "8"
+   │  │  └─ <ig>
+   │  │     └─ "10"
+   │  ├─ <helyszin>
+   │  │  └─ "In/103"
+   │  ├─ <oktato>
+   │  │  └─ "Dr. Wagner György"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="08" @tipus="előadás"
+   │  ├─ <targy>
+   │  │  └─ "Mesterséges intelligencia alapok"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Kedd"
+   │  │  ├─ <tol>
+   │  │  │  └─ "10"
+   │  │  └─ <ig>
+   │  │     └─ "12"
+   │  ├─ <helyszin>
+   │  │  └─ "XXXII A1"
+   │  ├─ <oktato>
+   │  │  └─ "Kunné Dr. Tamás Judit"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="09" @tipus="gyakorlat"
+   │  ├─ <targy>
+   │  │  └─ "Mesterséges intelligencia alapok"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Kedd"
+   │  │  ├─ <tol>
+   │  │  │  └─ "12"
+   │  │  └─ <ig>
+   │  │     └─ "14"
+   │  ├─ <helyszin>
+   │  │  └─ "XXXII A1"
+   │  ├─ <oktato>
+   │  │  └─ "Kunné Dr. Tamás Judit"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="10" @tipus="gyakorlat"
+   │  ├─ <targy>
+   │  │  └─ "Elektronika"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Kedd"
+   │  │  ├─ <tol>
+   │  │  │  └─ "14"
+   │  │  └─ <ig>
+   │  │     └─ "16"
+   │  ├─ <helyszin>
+   │  │  └─ "A1/317"
+   │  ├─ <oktato>
+   │  │  └─ "Dr. Kozsely Gábor"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="11" @tipus="gyakorlat"
+   │  ├─ <targy>
+   │  │  └─ "Windows rendszergazda"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Kedd"
+   │  │  ├─ <tol>
+   │  │  │  └─ "16"
+   │  │  └─ <ig>
+   │  │     └─ "18"
+   │  ├─ <helyszin>
+   │  │  └─ "In/103"
+   │  ├─ <oktato>
+   │  │  └─ "Dr. Wagner György"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   ├─ <ora> @id="12" @tipus="előadás"
+   │  ├─ <targy>
+   │  │  └─ "Webes adatkezelő környezetek"
+   │  ├─ <idopont>
+   │  │  ├─ <nap>
+   │  │  │  └─ "Szerda"
+   │  │  ├─ <tol>
+   │  │  │  └─ "8"
+   │  │  └─ <ig>
+   │  │     └─ "10"
+   │  ├─ <helyszin>
+   │  │  └─ "In/102"
+   │  ├─ <oktato>
+   │  │  └─ "Dr. Kovács László"
+   │  └─ <szak>
+   │     └─ "Mérnökinformatikus"
+   └─ <ora> @id="13" @tipus="gyakorlat"
+      ├─ <targy>
+      │  └─ "Webes adatkezelő környezetek"
+      ├─ <idopont>
+      │  ├─ <nap>
+      │  │  └─ "Szerda"
+      │  ├─ <tol>
+      │  │  └─ "10"
+      │  └─ <ig>
+      │     └─ "12"
+      ├─ <helyszin>
+      │  └─ "In/101"
+      ├─ <oktato>
+      │  └─ "Dr. Bednarik László"
+      └─ <szak>
+         └─ "Mérnökinformatikus"
