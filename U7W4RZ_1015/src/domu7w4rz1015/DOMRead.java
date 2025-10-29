@@ -1,4 +1,4 @@
-package domu7w4rz1029;
+package domu7w4rz1015;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class DOMRead1 {
+public class DOMRead {
 
 	 public static void main(String argv[]) throws SAXException, IOException, ParserConfigurationException
 	    {
