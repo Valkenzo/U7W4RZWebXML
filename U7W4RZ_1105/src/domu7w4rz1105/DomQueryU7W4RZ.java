@@ -15,7 +15,7 @@ public class DomQueryU7W4RZ {
     public static void main(String[] args) {
         try {
             // Bemeneti XML
-            File inputFile = new File("./U7W4RZ_1105/DomParseU7W4RZ/U7W4RZhallgato.xml");
+            File inputFile = new File("./U7W4RZ_1105/U7W4RZhallgato.xml");
 
             // DOM inicializálás
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

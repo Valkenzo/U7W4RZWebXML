@@ -20,8 +20,8 @@ public class DomQuery1U7W4RZ {
     public static void main(String[] args) {
         try {
             // --- Bemeneti/Kimeneti fájlok ---
-            File inputFile = new File("./U7W4RZ_1105/DomParseU7W4RZ/orarendU7W4RZ.xml");
-            File firstOraOut = new File("./U7W4RZ_1105/DomParseU7W4RZ/orarendQuery1FirstOra.txt"); // 2.) kimeneti fájl
+            File inputFile = new File("./U7W4RZ_1105/orarendU7W4RZ.xml");
+            File firstOraOut = new File("./U7W4RZ_1105/orarendQuery1FirstOra.txt"); // 2.) kimeneti fájl
 
             // --- DOM beolvasás ---
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

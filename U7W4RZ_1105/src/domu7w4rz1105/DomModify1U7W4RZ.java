@@ -22,8 +22,8 @@ public class DomModify1U7W4RZ {
     public static void main(String[] argv) {
         try {
             // --- Bemeneti és kimeneti fájlok ---
-            File inputFile = new File("./U7W4RZ_1105/DomParseU7W4RZ/orarendU7W4RZ.xml");
-            File outputFile = new File("./U7W4RZ_1105/DomParseU7W4RZ/orarendModify1U7W4RZ.xml");
+            File inputFile = new File("./U7W4RZ_1105/orarendU7W4RZ.xml");
+            File outputFile = new File("./U7W4RZ_1105/orarendModify1U7W4RZ.xml");
 
             // --- DOM előkészítés (beolvasás) ---
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
