@@ -1,0 +1,9 @@
+Ora [id=01, tipus=előadás]
+  targy: Elektronika
+  idopont/nap: Hétfő
+  idopont/tol: 8
+  idopont/ig: 10
+  helyszin: III. A4 fsz.
+  oktato: Szabó Norbert
+  szak: Mérnökinformatikus
+
