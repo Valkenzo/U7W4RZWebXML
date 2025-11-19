@@ -1,0 +1,151 @@
+{
+  "$schema": "orarendU7W4RZSchema.json",
+  "U7W4RZ_orarend": {
+    "ora": [
+      {
+        "targy": "Elektronika",
+        "idopont": {
+          "nap": "hétfő",
+          "tol": 8,
+          "ig": 10
+        },
+        
+        "helyszin": "III. A4 fsz.",
+        "oktato": "Szabó Norbert",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "WEB technológiák 1.",
+        "idopont": {
+          "nap": "hétfő",
+          "tol": 10,
+          "ig": 12
+        },
+        "helyszin": "V. A1",
+        "oktato": "Agárdi Anita",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Műszaki szaknyelv 1.",
+        "idopont": {
+          "nap": "hétfő",
+          "tol": 12,
+          "ig": 14
+        },
+        "helyszin": "A1/314",
+        "oktato": "Pataki Jánosné",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "WEB technológiák 1.",
+        "idopont": {
+          "nap": "hétfő",
+          "tol": 14,
+          "ig": 16
+        },
+        "helyszin": "In/101",
+        "oktato": "Agárdi Anita",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Mobil programozási alapok",
+        "idopont": {
+          "nap": "hétfő",
+          "tol": 16,
+          "ig": 18
+        },
+        "helyszin": "In/101",
+        "oktato": "Agárdi Anita",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Mobil programozási alapok",
+        "idopont": {
+          "nap": "hétfő",
+          "tol": 18,
+          "ig": 20
+        },
+        "helyszin": "In/101",
+        "oktato": "Agárdi Anita",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Windows rendszergazda",
+        "idopont": {
+          "nap": "kedd",
+          "tol": 8,
+          "ig": 10
+        },
+        "helyszin": "In/103",
+        "oktato": "Dr. Wagner György",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Mesterséges intelligencia alapok",
+        "idopont": {
+          "nap": "kedd",
+          "tol": 10,
+          "ig": 12
+        },
+        "helyszin": "XXXII A1",
+        "oktato": "Kunné Dr. Tamás Judit",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Mesterséges intelligencia alapok",
+        "idopont": {
+          "nap": "kedd",
+          "tol": 12,
+          "ig": 14
+        },
+        "helyszin": "XXXII A1",
+        "oktato": "Kunné Dr. Tamás Judit",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Elektronika",
+        "idopont": {
+          "nap": "kedd",
+          "tol": 14,
+          "ig": 16
+        },
+        "helyszin": "A1/317",
+        "oktato": "Dr. Kozsely Gábor",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Windows rendszergazda",
+        "idopont": {
+          "nap": "kedd",
+          "tol": 16,
+          "ig": 18
+        },
+        "helyszin": "In/103",
+        "oktato": "Dr. Wagner György",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Webes adatkezelő környezetek",
+        "idopont": {
+          "nap": "szerda",
+          "tol": 8,
+          "ig": 10
+        },
+        "helyszin": "In/102",
+        "oktato": "Dr. Kovács László",
+        "szak": "Mérnökinformatikus"
+      },
+      {
+        "targy": "Webes adatkezelő környezetek",
+        "idopont": {
+          "nap": "szerda",
+          "tol": 10,
+          "ig": 12
+        },
+        "helyszin": "In/101",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Mérnökinformatikus"
+      }
+    ]
+  }
+}

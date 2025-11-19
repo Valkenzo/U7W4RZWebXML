@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "DOMRead",
+            "request": "launch",
+            "mainClass": "DOMRead/domu7w4rz1015.DOMRead",
+            "projectName": "DomParseU7W4RZ (2)"
+        },
+        {
+            "type": "java",
+            "name": "DOMRead(1)",
+            "request": "launch",
+            "mainClass": "DOMRead/domu7w4rz1029.DOMRead",
+            "projectName": "DomParseU7W4RZ"
+        },
+        {
+            "type": "java",
+            "name": "DOMRead1",
+            "request": "launch",
+            "mainClass": "DOMRead/domu7w4rz1029.DOMRead1",
+            "projectName": "DomParseU7W4RZ"
+        },
+        {
+            "type": "java",
+            "name": "xPathModifyU7W4RZ",
+            "request": "launch",
+            "mainClass": "xPathQueryU7W4RZ/xpathu7w4rz.xPathModifyU7W4RZ",
+            "projectName": "xPathU7W4RZ"
+        },
+        {
+            "type": "java",
+            "name": "xPathModifyU7W4RZ_",
+            "request": "launch",
+            "mainClass": "xPathQueryU7W4RZ/xpathu7w4rz.xPathModifyU7W4RZ_",
+            "projectName": "xPathU7W4RZ"
+        },
+        {
+            "type": "java",
+            "name": "xPathQueryU7W4RZ",
+            "request": "launch",
+            "mainClass": "xPathQueryU7W4RZ/xpathu7w4rz.xPathQueryU7W4RZ",
+            "projectName": "xPathU7W4RZ"
+        },
+        {
+            "type": "java",
+            "name": "xPathQueryU7W4RZ_",
+            "request": "launch",
+            "mainClass": "xPathQueryU7W4RZ/xpathu7w4rz.xPathQueryU7W4RZ_",
+            "projectName": "xPathU7W4RZ"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>U7W4RZ Órarend</title>
+</head>
+<body>
+
+<h1>U7W4RZ Órarend 2025</h1>
+
+<button onclick="loadJson()">Órarend betöltése</button>
+
+<div id="output" style="margin-top:20px; font-size:18px;"></div>
+
+<script>
+function loadJson() {
+    fetch("orarendU7W4RZ.json")
+        .then(response => response.json())
+        .then(data => {
+            const root = data["U7W4RZ_orarend"];
+            const lessons = root.ora;
+
+            let html = "";
+
+            lessons.forEach(lesson => {
+
+                html += `<b>Tárgy:</b> ${lesson.targy}<br>`;
+                html += `<b>Helyszín:</b> ${lesson.helyszin}<br>`;
+                html += `<b>Oktató:</b> ${lesson.oktato}<br>`;
+                html += `<b>Szak:</b> ${lesson.szak}<br>`;
+
+                html += `<b>Időpont:</b> ${lesson.idopont.nap}, `
+                      + `${lesson.idopont.tol} - ${lesson.idopont.ig}<br><br>`;
+            });
+
+            document.getElementById("output").innerHTML = html;
+        })
+        .catch(err => {
+            document.getElementById("output").innerHTML = "Hiba történt: " + err;
+        });
+}
+</script>
+
+</body>
+</html>
