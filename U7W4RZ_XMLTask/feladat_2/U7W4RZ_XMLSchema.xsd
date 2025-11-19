@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ===================== Saját típusok ===================== -->
+  <xs:simpleType name="telefonszam_tipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+?[0-9 \-()]{6,30}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="taj_tipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{9}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="statusz_tipus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="lefoglalt" />
+      <xs:enumeration value="lezart" />
+      <xs:enumeration value="lemondott" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sikeresseg_tipus">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ===================== Gyökérelem ===================== -->
+  <xs:element name="egeszsegugy">
+
+    <!-- ===================== PRIMARY / FOREIGN KEYS ===================== -->
+    <xs:key name="orvos_pk">
+      <xs:selector xpath="orvosok/orvos" />
+      <xs:field xpath="@id" />
+    </xs:key>
+
+    <xs:key name="paciens_pk">
+      <xs:selector xpath="paciensek/paciens" />
+      <xs:field xpath="@id" />
+    </xs:key>
+
+    <!-- KARTON kulcsok -->
+    <xs:key name="karton_pk">
+      <xs:selector xpath="kartonok/karton" />
+      <xs:field xpath="@id" />
+    </xs:key>
+
+    <!-- Egy pácienshez legfeljebb egy karton -->
+    <xs:unique name="egy_karton_pacienkent">
+      <xs:selector xpath="kartonok/karton" />
+      <xs:field xpath="@paciens_ref" />
+    </xs:unique>
+
+    <!-- Karton páciens kapcsolat -->
+    <xs:keyref name="karton_paciens_fk" refer="paciens_pk">
+      <xs:selector xpath="kartonok/karton" />
+      <xs:field xpath="@paciens_ref" />
+    </xs:keyref>
+
+    <xs:key name="kezeles_pk">
+      <xs:selector xpath="kezelesek/kezeles" />
+      <xs:field xpath="@id" />
+    </xs:key>
+
+    <xs:key name="recept_pk">
+      <xs:selector xpath="receptek/recept" />
+      <xs:field xpath="@id" />
+    </xs:key>
+
+    <xs:key name="idopont_pk">
+      <xs:selector xpath="idopontok/idopont" />
+      <xs:field xpath="@id" />
+    </xs:key>
+
+    <!-- Foreign key kapcsolatok -->
+    <xs:keyref name="idopont_orvos_fk" refer="orvos_pk">
+      <xs:selector xpath="idopontok/idopont" />
+      <xs:field xpath="@orvos_ref" />
+    </xs:keyref>
+
+    <xs:keyref name="idopont_paciens_fk" refer="paciens_pk">
+      <xs:selector xpath="idopontok/idopont" />
+      <xs:field xpath="@paciens_ref" />
+    </xs:keyref>
+
+    <xs:keyref name="recept_orvos_fk" refer="orvos_pk">
+      <xs:selector xpath="receptek/recept" />
+      <xs:field xpath="@orvos_ref" />
+    </xs:keyref>
+
+    <xs:keyref name="recept_kezeles_fk" refer="kezeles_pk">
+      <xs:selector xpath="receptek/recept" />
+      <xs:field xpath="@kezeles_ref" />
+    </xs:keyref>
+
+    <xs:keyref name="elvegzett_paciens_fk" refer="paciens_pk">
+      <xs:selector xpath="elvegzett_kezelesek/elvegzett_kezeles" />
+      <xs:field xpath="@paciens_ref" />
+    </xs:keyref>
+
+    <xs:keyref name="elvegzett_kezeles_fk" refer="kezeles_pk">
+      <xs:selector xpath="elvegzett_kezelesek/elvegzett_kezeles" />
+      <xs:field xpath="@kezeles_ref" />
+    </xs:keyref>
+
+  </xs:element>
+
+  <!-- ===================== ORVOSOK ===================== -->
+  <xs:complexType name="orvos_tipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string" />
+      <xs:element name="szakterulet" type="xs:string" />
+      <xs:element name="telefonszamok" type="telefonszamok_tipus" />
+      <xs:element name="rendelo_szoba" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required" />
+  </xs:complexType>
+
+  <!-- ===================== TELEFONSZAMOK ===================== -->
+  <xs:complexType name="telefonszamok_tipus">
+    <xs:sequence>
+      <xs:element name="telefonszam" type="telefonszam_tipus" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== PACIENSEK ===================== -->
+  <xs:complexType name="paciens_tipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string" />
+      <xs:element name="cim" type="cim_tipus" />
+      <xs:element name="szuletesi_datum" type="xs:date" />
+      <xs:element name="taj" type="taj_tipus" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required" />
+  </xs:complexType>
+
+  <!-- ===================== CIM ===================== -->
+  <xs:complexType name="cim_tipus">
+    <xs:sequence>
+      <xs:element name="iranyitoszam" type="xs:int" />
+      <xs:element name="varos" type="xs:string" />
+      <xs:element name="utca" type="xs:string" />
+      <xs:element name="hazszam" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== KARTONOK (1:1 PÁCIENSHEZ) ===================== -->
+  <xs:complexType name="karton_tipus">
+    <xs:sequence>
+      <xs:element name="vercsoport" type="xs:string" />
+      <xs:element name="allergiak" type="xs:string" />
+      <xs:element name="kronikus_betegsegek" type="xs:string" />
+      <xs:element name="megjegyzes" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required" />
+    <xs:attribute name="paciens_ref" type="xs:IDREF" use="required" />
+  </xs:complexType>
+
+  <!-- ===================== KEZELESEK ===================== -->
+  <xs:complexType name="kezeles_tipus">
+    <xs:sequence>
+      <xs:element name="tipus" type="xs:string" />
+      <xs:element name="leiras" type="xs:string" />
+      <xs:element name="ar" type="xs:integer" />
+      <xs:element name="idotartam" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required" />
+  </xs:complexType>
+
+  <!-- ===================== IDŐPONTOK ===================== -->
+  <xs:complexType name="idopont_tipus">
+    <xs:sequence>
+      <xs:element name="datum" type="xs:date" />
+      <xs:element name="kezdes_ido" type="xs:time" />
+      <xs:element name="befejezes_ido" type="xs:time" />
+      <xs:element name="statusz" type="statusz_tipus" />
+      <xs:element name="megjegyzes" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required" />
+    <xs:attribute name="orvos_ref" type="xs:IDREF" use="required" />
+    <xs:attribute name="paciens_ref" type="xs:IDREF" use="required" />
+  </xs:complexType>
+
+  <!-- ===================== RECEPTEK ===================== -->
+  <xs:complexType name="recept_tipus">
+    <xs:sequence>
+      <xs:element name="gyogyszer_nev" type="xs:string" />
+      <xs:element name="adagolas" type="xs:string" />
+      <xs:element name="kiallitas_datum" type="xs:date" />
+      <xs:element name="ervenyesseg" type="xs:date" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required" />
+    <xs:attribute name="orvos_ref" type="xs:IDREF" use="required" />
+    <xs:attribute name="kezeles_ref" type="xs:IDREF" use="required" />
+  </xs:complexType>
+
+  <!-- ===================== ELVÉGZETT KEZELÉSEK ===================== -->
+  <xs:complexType name="elvegzett_kezeles_tipus">
+    <xs:sequence>
+      <xs:element name="datum" type="xs:date" />
+      <xs:element name="sikeresseg" type="sikeresseg_tipus" />
+      <xs:element name="megjegyzes" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="paciens_ref" type="xs:IDREF" use="required" />
+    <xs:attribute name="kezeles_ref" type="xs:IDREF" use="required" />
+  </xs:complexType>
+</xs:schema>

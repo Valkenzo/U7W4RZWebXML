@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><egeszsegugy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="U7W4RZ_XMLSchema.xsd">
+
+  <!-- ===================== ORVOSOK ===================== -->
+  <orvos id="O001">
+    <nev>Dr. Kiss Péter</nev>
+    <szakterulet>Kardiológia</szakterulet>
+      <telefonszam>+36-1-555-1122</telefonszam>
+      <telefonszam>+36-30-987-6543</telefonszam>
+    <rendeloSzoba>15</rendeloSzoba>
+  </orvos>
+
+  <orvos id="O002">
+    <nev>Dr. Szabó Anna</nev>
+    <szakterulet>Bőrgyógyászat</szakterulet>
+      <telefonszam>+36-1-444-7788</telefonszam>
+    <rendeloSzoba>8</rendeloSzoba>
+  </orvos>
+
+  <!-- ===================== PACIENSEK ===================== -->
+    <paciens id="P001">
+    <nev>Nagy Ádám</nev>
+    <cim>
+      <iranyitoszam>1134</iranyitoszam>
+      <varos>Győr</varos>
+      <utca>Tüzér utca</utca>
+      <hazszam>5</hazszam>
+    </cim>
+    <szuletesiDatum>1990-06-15</szuletesiDatum>
+    <taj>123456789</taj>
+  </paciens>
+
+    <paciens id="P002">
+    <nev>Kovács Eszter</nev>
+    <cim>
+      <iranyitoszam>8200</iranyitoszam>
+      <varos>Veszprém</varos>
+      <utca>Ady Endre utca</utca>
+      <hazszam>10</hazszam>
+    </cim>
+    <szuletesiDatum>1985-02-22</szuletesiDatum>
+    <taj>987654321</taj>
+  </paciens>
+
+  <!-- ===================== KARTONOK (1:1 PÁCIENSHEZ) ===================== -->
+  <karton id="KART001" paciens_ref="P001">
+    <vercsoport>0 Rh+</vercsoport>
+    <allergiak>penicillin</allergiak>
+    <kronikusBetegsegek>hypertonia</kronikusBetegsegek>
+    <megjegyzes>Sikeres kezelés, további vizsgálat nem szükséges.</megjegyzes>
+  </karton>
+
+  <karton id="KART002" paciens_ref="P002">
+    <vercsoport>A Rh-</vercsoport>
+    <allergiak>—</allergiak>
+    <kronikusBetegsegek>asztma</kronikusBetegsegek>
+    <megjegyzes>Éves kontroll javasolt.</megjegyzes>
+  </karton>
+
+  <!-- ===================== KEZELESEK ===================== -->
+  <kezeles id="K001">
+    <tipus>Ultrahang</tipus>
+    <leiras>Hasüregi ultrahang vizsgálat</leiras>
+    <ar>17000</ar>
+    <idotartam>30 perc</idotartam>
+  </kezeles>
+
+  <kezeles id="K002">
+    <tipus>Bőrdiagnosztika</tipus>
+    <leiras>Bőrelváltozások dermatoszkópos vizsgálata</leiras>
+    <ar>12000</ar>
+    <idotartam>20 perc</idotartam>
+  </kezeles>
+
+  <!-- ===================== IDŐPONTOK ===================== -->
+  <idopont id="I001" orvos_ref="O001" paciens_ref="P001">
+    <datum>2025-10-28</datum>
+    <kezdesIdo>09:00:00</kezdesIdo>
+    <befejezesIdo>09:30:00</befejezesIdo>
+    <statusz>lezart</statusz>
+    <megjegyzes>Első konzultáció</megjegyzes>
+  </idopont>
+
+  <idopont id="I002" orvos_ref="O002" paciens_ref="P002">
+    <datum>2025-10-29</datum>
+    <kezdesIdo>11:00:00</kezdesIdo>
+    <befejezesIdo>11:20:00</befejezesIdo>
+    <statusz>lezart</statusz>
+    <megjegyzes>Bőrdiagnosztikai vizsgálat</megjegyzes>
+  </idopont>
+
+  <!-- ===================== RECEPTEK ===================== -->
+  <recept id="R001" kezeles_ref="K001" orvos_ref="O001">
+    <gyogyszerNev>Atorvastatin 20 mg</gyogyszerNev>
+    <adagolas>Napi 1 tabletta</adagolas>
+    <kiallitasDatum>2025-10-28</kiallitasDatum>
+    <ervenyesseg>2026-01-28</ervenyesseg>
+  </recept>
+
+  <recept id="R002" kezeles_ref="K002" orvos_ref="O002">
+    <gyogyszerNev>Sudocrem kenőcs</gyogyszerNev>
+    <adagolas>Napi kétszer vékony rétegben</adagolas>
+    <kiallitasDatum>2025-10-29</kiallitasDatum>
+    <ervenyesseg>2025-12-31</ervenyesseg>
+  </recept>
+
+  <!-- ===================== ELVÉGZETT KEZELÉSEK ===================== -->
+  <elvegzettKezeles kezeles_ref="K001" paciens_ref="P001">
+    <datum>2025-10-28</datum>
+    <sikeresseg>5</sikeresseg>
+    <megjegyzes>Sikeres ultrahang, további vizsgálat nem szükséges.</megjegyzes>
+  </elvegzettKezeles>
+
+  <elvegzettKezeles kezeles_ref="K002" paciens_ref="P002">
+    <datum>2025-10-29</datum>
+    <sikeresseg>4</sikeresseg>
+    <megjegyzes>Kontrollvizsgálat javasolt egy hónap múlva.</megjegyzes>
+  </elvegzettKezeles>
+</egeszsegugy>
