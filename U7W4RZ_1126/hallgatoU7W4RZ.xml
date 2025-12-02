@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="hallgatoU7W4RZ.xsl" type="text/xsl"?>
+<class>
+    <student id="01">
+        <vezeteknev>Valko</vezeteknev>
+        <keresztnev>Attila</keresztnev>
+        <becenev>Valkenzzo</becenev>
+        <kor>33</kor>
+        <osztondij>27500</osztondij>
+    </student>
+
+     <student id="02">
+        <vezeteknev>Nagy</vezeteknev>
+        <keresztnev>Lajos</keresztnev>
+        <becenev>Lali</becenev>
+        <kor>20</kor>
+        <osztondij>10000</osztondij>
+    </student>
+
+     <student id="03">
+        <vezeteknev>Kovacs</vezeteknev>
+        <keresztnev>Zsolt</keresztnev>
+        <becenev>Zsolesz</becenev>
+        <kor>30</kor>
+        <osztondij>15000</osztondij>
+    </student>
+</class>

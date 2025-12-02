@@ -14,7 +14,7 @@ public class U7W4RZDomRead {
     //File xmlFile = new File("C:\\Users\\User\\Egyetemi_dolgok\\5_felev\\webes_adatkez\\beadando\\U7W4RZ_XMLTask\\feladat_1\\U7W4RZ_XML.xml");
 	public static void main(String[] args) {
         try {
-        	File xmlFile = new File("../feladat_1/U7W4RZ_XML.xml");
+        	File xmlFile = new File("./feladat_1/U7W4RZ_XML.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(xmlFile);

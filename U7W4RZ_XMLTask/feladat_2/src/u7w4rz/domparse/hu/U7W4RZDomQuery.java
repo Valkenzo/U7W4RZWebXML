@@ -13,7 +13,7 @@ public class U7W4RZDomQuery {
 
 	 public static void main(String[] args) {
 	        try {
-	        	File xmlFile = new File("../feladat_1/U7W4RZ_XML.xml");
+	        	File xmlFile = new File("./feladat_1/U7W4RZ_XML.xml");
 	            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 	            Document doc = dBuilder.parse(xmlFile);

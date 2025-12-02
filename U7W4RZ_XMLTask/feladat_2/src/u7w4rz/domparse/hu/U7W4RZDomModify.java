@@ -19,7 +19,7 @@ public class U7W4RZDomModify {
 	 public static void main(String[] args) {
 	        try {
 	          
-	        	File xmlFile = new File("../feladat_1/U7W4RZ_XML.xml");
+	        	File xmlFile = new File("./feladat_1/U7W4RZ_XML.xml");
 	            System.out.println("Betöltés: " + xmlFile.getAbsolutePath());
 
 	            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -78,7 +78,7 @@ public class U7W4RZDomModify {
 	            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
 	            // új fájlba mentjük, hogy az eredeti megmaradjon
-	            File outFile = new File("../feladat_2/U7W4RZ_XML_Modositott.xml");
+	            File outFile = new File("./feladat_2/U7W4RZ_XML_Modositott.xml");
 	            transformer.transform(new DOMSource(doc), new StreamResult(outFile));
 
 	            System.out.println("\n Módosítások elmentve: " + outFile.getAbsolutePath());
