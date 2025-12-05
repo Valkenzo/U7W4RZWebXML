@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<!--Forrás: AI-->
+
+<html lang="hu">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>U7W4RZ Hallgatók</title>
+  <style>
+    * {
+        box-sizing:border-box;
+    }
+    body {
+        font-family:Segoe UI,Arial,sans-serif;
+        background:#f5f5f5;margin:20px;color:#333;
+    }
+    h1 {
+        font-size:24px;
+        margin-bottom:15px;
+    }
+    .container {
+        max-width:960px;
+        margin:auto;
+    }
+    .panel {
+        background:#fff;
+        border:1px solid #ddd;
+        border-radius:4px;
+        padding:15px;
+        margin-bottom:15px;
+        box-shadow:0 1px 3px rgba(0,0,0,.05);
+    }
+    .panel h2 {
+        margin:0 0 10px;
+        border-bottom:1px solid #eee;
+        padding-bottom:6px;
+        font-size:18px;
+    }
+    .form-group {
+        margin-bottom:10px;
+    }
+    label {
+        display:block;
+        font-size:12px;
+        font-weight:600;
+        margin-bottom:3px;
+        color:#555;
+    }
+    input,select {
+        width:100%;
+        max-width:400px;
+        padding:7px;
+        border:1px solid #ccc;
+        border-radius:3px;
+    }
+    table {
+        width:100%;
+        border-collapse:collapse;
+        background:#fff;
+        border:1px solid #ddd;
+    }
+    th,td {
+        padding:8px;
+        border-bottom:1px solid #eee;
+        text-align:left;
+        font-size:13px;
+    }
+    th {
+        background:#f0f0f0;
+    }
+    tr:nth-child(even) {
+        background:#fafafa;
+    }
+    button {
+        cursor:pointer;
+        padding:6px 10px;
+        border:none;
+        border-radius:3px;
+        font-size:12px;
+        color:#fff;
+        font-weight:600;
+        margin:1px;
+    }
+    .btn-main {
+        background:#5cb85c;
+    }
+    .btn-alt {
+        background:#337ab7;
+    }
+    .btn-danger {
+        background:#d9534f;
+    }
+    .btn-info {
+        background:#5bc0de;
+    }
+    .hidden {
+        display:none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>U7W4RZ Hallgatók</h1>
+
+        <div class="panel">
+            <h2>Új hallgató hozzáadása</h2>
+            <form id="form">
+                <input type="hidden" id="editIndex" value="-1">
+                <div class="form-group"><label for="nev">Név</label><input id="nev" required></div>
+                <div class="form-group"><label for="evfolyam">Évfolyam</label><input id="evfolyam" type="number" min="1" required></div>
+                <div class="form-group"><label for="szak">Szak</label><input id="szak" required></div>
+                <div class="form-group"><label for="email">Email</label><input id="email" type="email" required></div>
+                <div class="form-group"><label for="neptun">NEPTUN kód</label><input id="neptun" maxlength="6" style="text-transform:uppercase" required></div>
+                <button class="btn-main" id="saveBtn">Mentés</button>
+                <button type="button" class="btn-danger hidden" id="cancelBtn">Mégse</button>
+            </form>
+        </div>
+
+        <div class="panel">
+            <div class="form-group">
+                <label for="search">Keresés</label>
+                <input id="search" placeholder="Név, kód, email...">
+                </div>
+                <div class="form-group">
+                <label for="sort">Rendezés</label>
+                <select id="sort">
+                    <option value="none">Nincs</option>
+                    <option value="name">Név (A–Z)</option>
+                    <option value="year">Évfolyam (növ.)</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <label>Export / Import JSON</label>
+                <button type="button" class="btn-alt" id="exportBtn">Export</button>
+                <input type="file" id="importFile" accept=".json">
+                <button type="button" class="btn-info" id="importBtn">Import</button>
+            </div>
+        </div>
+
+        <h2>Hallgatók listája</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Név</th><th>Évf.</th><th>Szak</th><th>Email</th><th>NEPTUN</th><th>Műveletek</th>
+            </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const $ = id => document.getElementById(id);
+        const DB = 'neptunkod_hallgatok_db';
+        var students = JSON.parse(localStorage.getItem(DB) || '[]');
+
+        const saveStore = () => localStorage.setItem(DB, JSON.stringify(students));
+
+        const readForm = () => ({
+            nev: $('nev').value,
+            evfolyam: +$('evfolyam').value,
+            szak: $('szak').value,
+            email: $('email').value,
+            neptun: $('neptun').value.toUpperCase()
+        });
+
+        const fillForm = (s, i) => {
+            Object.entries(s).forEach(([k,v]) => $(k).value = v);
+            $('editIndex').value = i;
+            $('saveBtn').textContent = 'Módosítás mentése';
+            $('saveBtn').className = 'btn-alt';
+            $('cancelBtn').classList.remove('hidden');
+            window.scrollTo(0,0);
+        };
+
+        const resetForm = () => {
+            $('form').reset();
+            $('editIndex').value = -1;
+            $('saveBtn').textContent = 'Mentés';
+            $('saveBtn').className = 'btn-main';
+            $('cancelBtn').classList.add('hidden');
+        };
+
+        const render = () => {
+            const term = $('search').value.toLowerCase();
+            const sort = $('sort').value;
+            var data = students.map((s,i)=>({...s,i}));
+
+            if (term) {
+            data = data.filter(s =>
+                Object.values(s).some(v => String(v).toLowerCase().includes(term))
+            );
+            }
+
+            if (sort === 'name') data.sort((a,b)=>a.nev.localeCompare(b.nev));
+            if (sort === 'year') data.sort((a,b)=>a.evfolyam-b.evfolyam);
+
+            $('tbody').innerHTML = data.map(s => `
+            <tr>
+                <td>${s.nev}</td>
+                <td>${s.evfolyam}</td>
+                <td>${s.szak}</td>
+                <td>${s.email}</td>
+                <td>${s.neptun}</td>
+                <td>
+                <button class="btn-alt" onclick="edit(${s.i})">Módosít</button>
+                <button class="btn-danger" onclick="del(${s.i})">Töröl</button>
+                </td>
+            </tr>`).join('');
+        };
+
+        $('form').addEventListener('submit', e => {
+            e.preventDefault();
+            const s = readForm();
+            const i = +$('editIndex').value;
+            if (i === -1) students.push(s); else students[i] = s;
+            saveStore();
+            render();
+            resetForm();
+        });
+
+        $('cancelBtn').onclick = resetForm;
+        $('search').oninput = render;
+        $('sort').onchange = render;
+
+        window.edit = i => fillForm(students[i], i);
+        window.del = i => {
+            if (confirm('Biztosan törli?')) {
+            students.splice(i,1);
+            saveStore();
+            render();
+            }
+        };
+
+        $('exportBtn').onclick = () => {
+            if (!students.length) {
+                alert('Nincs exportálható adat!');
+                return;
+            }
+            const blob = new Blob([JSON.stringify(students,null,2)],{type:'application/json'});
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'hallgatok_db.json';
+            a.click();
+            URL.revokeObjectURL(a.href);
+        };
+
+        $('importBtn').onclick = () => {
+            const file = $('importFile').files[0];
+            if (!file) {
+                alert('Válassz JSON fájlt!');
+                return;
+            }
+            const r = new FileReader();
+            r.onload = e => {
+            try{
+                const data = JSON.parse(e.target.result);
+                if (!Array.isArray(data)) throw new Error();
+                if (confirm('Felülírja a jelenlegi listát?')) {
+                students = data;
+                saveStore();
+                render();
+                }
+            }catch{ alert('Hibás JSON fájl!'); }
+            };
+            r.readAsText(file);
+        };
+
+        render();
+    </script>
+
+</body>
+
+</html>
